@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="Tugas-3.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="Tugas-1.html" />
+    <link rel="next" title="Tugas 3 K-NN" href="Tugas-3.html" />
+    <link rel="prev" title="Tugas Penambangan Data 1" href="Tugas-1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,9 +116,24 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-1.html">
+   Tugas Penambangan Data 1
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    TUGAS 2 PENAMBANGAN DATA
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-3.html">
+   Tugas 3 K-NN
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Naive-Bayes-Classifier.html">
+   Naive-Bayes-Classifier
   </a>
  </li>
 </ul>
@@ -327,140 +342,14 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   TUGAS 2 PENAMBANGAN DATA
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hitung-data">
+   Hitung Data
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tugas-2">
-   Tugas 2
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cari-data">
-     Cari data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hitung-data">
-     Hitung Data
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#definisi-discretization">
-       Definisi
-       <em>
-        discretization
-       </em>
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#cut">
-         Cut
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lebar-sepal">
-   Lebar Sepal
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lebar-kelopak">
-   Lebar kelopak
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#panjang-sepal">
-   Panjang Sepal
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#panjang-kelopak">
-   Panjang kelopak
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#qcut">
-   Qcut
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Lebar Sepal
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Lebar kelopak
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   Panjang Sepal
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   Panjang kelopak
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definisi-binning-berbasis-entropi">
-   Definisi Binning berbasis entropi
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#persiapan">
-   Persiapan
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori">
-   Fungsi menghitung banyaknya data setiap kategori
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-   Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau
-   <em>
-    split value
-   </em>
-   yang diberikan
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
-   Fungsi menghitung perbedaan
-   <em>
-    gain
-   </em>
-   antara entropi inisial dengan entropi nilai pembagi yang diberikan
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-entropy">
-   Fungsi menghitung entropy
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-   Fungsi menghitung Info entropy berdasarkan nilai pembagi atau
-   <em>
-    split value
-   </em>
-   yang diberikan
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementasi">
-   Implementasi
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cut">
+   Cut
   </a>
  </li>
 </ul>
@@ -482,140 +371,14 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   TUGAS 2 PENAMBANGAN DATA
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hitung-data">
+   Hitung Data
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tugas-2">
-   Tugas 2
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cari-data">
-     Cari data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hitung-data">
-     Hitung Data
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#definisi-discretization">
-       Definisi
-       <em>
-        discretization
-       </em>
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#cut">
-         Cut
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lebar-sepal">
-   Lebar Sepal
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lebar-kelopak">
-   Lebar kelopak
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#panjang-sepal">
-   Panjang Sepal
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#panjang-kelopak">
-   Panjang kelopak
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#qcut">
-   Qcut
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Lebar Sepal
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   Lebar kelopak
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   Panjang Sepal
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   Panjang kelopak
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#definisi-binning-berbasis-entropi">
-   Definisi Binning berbasis entropi
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#persiapan">
-   Persiapan
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori">
-   Fungsi menghitung banyaknya data setiap kategori
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-   Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau
-   <em>
-    split value
-   </em>
-   yang diberikan
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
-   Fungsi menghitung perbedaan
-   <em>
-    gain
-   </em>
-   antara entropi inisial dengan entropi nilai pembagi yang diberikan
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-entropy">
-   Fungsi menghitung entropy
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-   Fungsi menghitung Info entropy berdasarkan nilai pembagi atau
-   <em>
-    split value
-   </em>
-   yang diberikan
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#implementasi">
-   Implementasi
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cut">
+   Cut
   </a>
  </li>
 </ul>
@@ -633,17 +396,14 @@ title="Print to PDF"
 <p>Nama : Farid Ghozali</p>
 <p>NIM  : 210411100119</p>
 <p>Link Colab : <a class="reference external" href="https://colab.research.google.com/drive/1riMsiK6B7ieoeH2gkaJ_mjAJR8nVzpcQ#scrollTo=-sf4b6tOEP4U">https://colab.research.google.com/drive/1riMsiK6B7ieoeH2gkaJ_mjAJR8nVzpcQ#scrollTo=-sf4b6tOEP4U</a></p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="tugas-2">
-<h1>Tugas 2<a class="headerlink" href="#tugas-2" title="Permalink to this headline">#</a></h1>
+<p><strong>Tugas 2</strong></p>
 <ol class="simple">
 <li><p>Carilah data yang bertipe numerik ( data klassifikasi)</p></li>
 <li><p>Lakukan proses diskritisasi dengan <em>equal width</em> dan <em>equal frequency</em></p></li>
 <li><p>Lakukan proses diskritisasi dengan basis <em>entropy</em></p></li>
 <li><p>Kumpulkan tugas dengan link github ( web statis dari jupyter book)</p></li>
 </ol>
-<section id="cari-data">
-<h2>Cari data<a class="headerlink" href="#cari-data" title="Permalink to this headline">#</a></h2>
+<p><strong>Cari data</strong></p>
 <p>sumber
 <a class="reference external" href="https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv">Data Bunga Iris</a></p>
 <div class="cell docutils container">
@@ -672,7 +432,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-c5ee6a83-a6d4-4aef-992b-4bc2408d650d">
+  <div id="df-06df3e35-8f85-432c-bd6c-4311b004a47f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -783,7 +543,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c5ee6a83-a6d4-4aef-992b-4bc2408d650d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-06df3e35-8f85-432c-bd6c-4311b004a47f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -834,12 +594,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-c5ee6a83-a6d4-4aef-992b-4bc2408d650d button.colab-df-convert');
+          document.querySelector('#df-06df3e35-8f85-432c-bd6c-4311b004a47f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c5ee6a83-a6d4-4aef-992b-4bc2408d650d');
+          const element = document.querySelector('#df-06df3e35-8f85-432c-bd6c-4311b004a47f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -872,19 +632,18 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-</section>
 <section id="hitung-data">
 <h2>Hitung Data<a class="headerlink" href="#hitung-data" title="Permalink to this headline">#</a></h2>
-<section id="definisi-discretization">
-<h3>Definisi <em>discretization</em><a class="headerlink" href="#definisi-discretization" title="Permalink to this headline">#</a></h3>
+<p><strong>Definisi discretization</strong></p>
 <ol class="simple">
 <li><p>Proses mengubah data bertipe data <em>numeric</em> menjadi data bertipe <em>categorical</em></p></li>
 <li><p>Diskritisasi memiliki 2 pendekatan yaitu <em>equal-width intervals</em> dan <em>equal-frequency intervals</em></p></li>
 <li><p><em>equal-width intervals</em> adalah diskritisasi dengan lebar data yang sama</p></li>
 <li><p><em>equal-frequency intervals</em> adalah diskritisasi dengan jumlah data yang sama</p></li>
 </ol>
+</section>
 <section id="cut">
-<h4>Cut<a class="headerlink" href="#cut" title="Permalink to this headline">#</a></h4>
+<h2>Cut<a class="headerlink" href="#cut" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Cut adalah sebuah metode pada library pandas untuk melakukan perhitungan interval frekuensi dengan lebar yang sama</p></li>
 </ul>
@@ -892,12 +651,7 @@ title="Print to PDF"
 <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">interval</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="lebar-sepal">
-<h1>Lebar Sepal<a class="headerlink" href="#lebar-sepal" title="Permalink to this headline">#</a></h1>
+<p><strong>Lebar Sepal</strong></p>
 <ul class="simple">
 <li><p>Equal Width Intervals lebar kelopak bunga Iris</p></li>
 <li><p>Dikelompokkan menjadi 3 kategori yaitu</p></li>
@@ -1149,9 +903,7 @@ Name: sepal.width, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="lebar-kelopak">
-<h1>Lebar kelopak<a class="headerlink" href="#lebar-kelopak" title="Permalink to this headline">#</a></h1>
+<p><strong>Lebar kelopak</strong></p>
 <ul class="simple">
 <li><p>Equal Width Intervals lebar mahkota bunga Iris</p></li>
 <li><p>Dikelompokkan menjadi 3 kategori yaitu</p></li>
@@ -1389,9 +1141,7 @@ Name: petal.width, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="panjang-sepal">
-<h1>Panjang Sepal<a class="headerlink" href="#panjang-sepal" title="Permalink to this headline">#</a></h1>
+<p><strong>Panjang Sepal</strong></p>
 <ul class="simple">
 <li><p>Equal Width Intervals panjang kelopak bunga Iris</p></li>
 <li><p>Dikelompokkan menjadi 3 kategori yaitu</p></li>
@@ -1630,9 +1380,7 @@ Name: sepal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="panjang-kelopak">
-<h1>Panjang kelopak<a class="headerlink" href="#panjang-kelopak" title="Permalink to this headline">#</a></h1>
+<p><strong>Panjang kelopak</strong></p>
 <ul class="simple">
 <li><p>Equal Width Intervals panjang mahkota bunga Iris</p></li>
 <li><p>Dikelompokkan menjadi 3 kategori yaitu</p></li>
@@ -1870,9 +1618,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="qcut">
-<h1>Qcut<a class="headerlink" href="#qcut" title="Permalink to this headline">#</a></h1>
+<p><strong>Qcut</strong></p>
 <ul class="simple">
 <li><p>Qcut adalah sebuah metode pada library pandas untuk melakukan perhitungan interval frekuensi yang sama</p></li>
 </ul>
@@ -1880,9 +1626,7 @@ Name: petal.length, dtype: int64
 <span class="n">pd</span><span class="o">.</span><span class="n">qcut</span><span class="p">(</span><span class="n">series</span><span class="p">,</span> <span class="n">interval</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Lebar Sepal<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h1>
+<p><strong>Lebar Sepal</strong></p>
 <ul class="simple">
 <li><p>Equal Frequency Intervals lebar kelopak bunga Iris</p></li>
 <li><p>Dikelompokkan menjadi 3 kategori yaitu</p></li>
@@ -2121,9 +1865,7 @@ Name: sepal.width, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id2">
-<h1>Lebar kelopak<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h1>
+<p><strong>Lebar kelopak</strong></p>
 <ul class="simple">
 <li><p>Equal Frequency Intervals lebar mahkota bunga Iris</p></li>
 <li><p>Dikelompokkan menjadi 3 kategori yaitu</p></li>
@@ -2362,9 +2104,7 @@ Name: petal.width, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id3">
-<h1>Panjang Sepal<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h1>
+<p><strong>Panjang Sepal</strong></p>
 <ul class="simple">
 <li><p>Equal Frequency Intervals panjang kelopak bunga Iris</p></li>
 <li><p>Dikelompokkan menjadi 3 kategori yaitu</p></li>
@@ -2603,9 +2343,7 @@ Name: sepal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="id4">
-<h1>Panjang kelopak<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h1>
+<p><strong>Panjang kelopak</strong></p>
 <ul class="simple">
 <li><p>Equal Frequency Intervals panjang mahkota bunga Iris</p></li>
 <li><p>Dikelompokkan menjadi 3 kategori yaitu</p></li>
@@ -2844,9 +2582,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="definisi-binning-berbasis-entropi">
-<h1>Definisi Binning berbasis entropi<a class="headerlink" href="#definisi-binning-berbasis-entropi" title="Permalink to this headline">#</a></h1>
+<p><strong>Definisi Binning berbasis entropi</strong></p>
 <ol class="simple">
 <li><p>Metode untuk mengelompokkan data <em>numeric</em> menjadi <em>categorical</em></p></li>
 <li><p>Pengelompokkan dengan mencari jumlah pembagi yang terabaik</p></li>
@@ -2861,9 +2597,7 @@ Name: petal.length, dtype: int64
 \displaystyle Entropy(S) &amp;= \sum_{i=0}^{k} -pi \ log_{2} \ pi \\
 \end{align*}
 \end{split}\]</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="persiapan">
-<h1>Persiapan<a class="headerlink" href="#persiapan" title="Permalink to this headline">#</a></h1>
+<p><strong>Persiapan</strong></p>
 <ul class="simple">
 <li><p>Impor modul log2 dari <em>package math</em></p></li>
 <li><p>Ambil data yang akan digunakan</p></li>
@@ -3065,9 +2799,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="fungsi-menghitung-banyaknya-data-setiap-kategori">
-<h1>Fungsi menghitung banyaknya data setiap kategori<a class="headerlink" href="#fungsi-menghitung-banyaknya-data-setiap-kategori" title="Permalink to this headline">#</a></h1>
+<p><strong>Fungsi menghitung banyaknya data setiap kategori</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hitung setiap nilai berdasarkan kategori yang diberikan</span>
@@ -3081,9 +2813,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-<h1>Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau <em>split value</em> yang diberikan<a class="headerlink" href="#fungsi-menghitung-banyaknya-data-setiap-kategori-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan" title="Permalink to this headline">#</a></h1>
+<p><strong>Fungsi menghitung banyaknya data setiap kategori berdasarkan nilai pembagi atau <em>split value</em> yang diberikan</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># membagi data yang diberikan berdasarkan kategori dan nilai split</span>
@@ -3099,9 +2829,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan">
-<h1>Fungsi menghitung perbedaan <em>gain</em> antara entropi inisial dengan entropi nilai pembagi yang diberikan<a class="headerlink" href="#fungsi-menghitung-perbedaan-gain-antara-entropi-inisial-dengan-entropi-nilai-pembagi-yang-diberikan" title="Permalink to this headline">#</a></h1>
+<p><strong>Fungsi menghitung perbedaan <em>gain</em> antara entropi inisial dengan entropi nilai pembagi yang diberikan</strong></p>
 <hr class="docutils" />
 <div class="math notranslate nohighlight">
 \[Gain(E_{new}) = (E_{initial}) \ - (E_{new})\]</div>
@@ -3115,9 +2843,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="fungsi-menghitung-entropy">
-<h1>Fungsi menghitung entropy<a class="headerlink" href="#fungsi-menghitung-entropy" title="Permalink to this headline">#</a></h1>
+<p><strong>Fungsi menghitung entropy</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># menghitung entropi</span>
@@ -3133,9 +2859,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan">
-<h1>Fungsi menghitung Info entropy berdasarkan nilai pembagi atau <em>split value</em> yang diberikan<a class="headerlink" href="#fungsi-menghitung-info-entropy-berdasarkan-nilai-pembagi-atau-split-value-yang-diberikan" title="Permalink to this headline">#</a></h1>
+<p><strong>Fungsi menghitung Info entropy berdasarkan nilai pembagi atau <em>split value</em> yang diberikan</strong></p>
 <hr class="docutils" />
 <div class="math notranslate nohighlight">
 \[ Info_A(D) = \frac{|D_1|}{|D|} Entropy (D_1)\frac{|D_2|}{|D|}+ Entropy (D_2)\]</div>
@@ -3151,9 +2875,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="implementasi">
-<h1>Implementasi<a class="headerlink" href="#implementasi" title="Permalink to this headline">#</a></h1>
+<p><strong>Implementasi</strong></p>
 <ul class="simple">
 <li><p>Hitung target <em>entropy</em></p></li>
 <li><p>Hitung target <em>entropy</em> dengan <em>split value</em></p></li>
@@ -3189,6 +2911,7 @@ Name: petal.length, dtype: int64
 </div>
 </div>
 </section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3221,13 +2944,13 @@ Name: petal.length, dtype: int64
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">&lt;no title&gt;</p>
+            <p class="prev-next-title">Tugas Penambangan Data 1</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Tugas-3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Tugas 3 K-NN</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
