@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Data Mining</title>
+    <title>K - Means Clustering ( Tugas 5 ) &#8212; Data Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -112,7 +112,7 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Tugas-1.html">
    Dissimilarity Binary Symetric ( Tugas 1 )
@@ -131,6 +131,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="Tugas-4.html">
    Naive-Bayes-Classifier ( Tugas 4 )
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   K - Means Clustering ( Tugas 5 )
   </a>
  </li>
 </ul>
@@ -317,50 +322,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>K - Means Clustering ( Tugas 5 )</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -368,7 +346,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>#K - Means Clustering ( Tugas 5 )</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="k-means-clustering-tugas-5">
+<h1>K - Means Clustering ( Tugas 5 )<a class="headerlink" href="#k-means-clustering-tugas-5" title="Permalink to this headline">#</a></h1>
 <p>Link Colab : <a class="reference external" href="https://colab.research.google.com/drive/1MyElto3v5yh3_Dw2YJtO4iWSXl1X4hX9?authuser=1#scrollTo=p4YHfp_BH7BV">https://colab.research.google.com/drive/1MyElto3v5yh3_Dw2YJtO4iWSXl1X4hX9?authuser=1#scrollTo=p4YHfp_BH7BV</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -469,14 +448,14 @@ latter are NOT linearly separable from each other.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
- 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
- 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 1 2 2 2 2 1 2 2 2 2
- 2 2 1 1 2 2 2 2 1 2 1 2 1 2 2 1 1 2 2 2 2 2 1 2 2 2 2 1 2 2 2 1 2 2 2 1 2
- 2 1]
-[[5.006      3.428      1.462      0.246     ]
- [5.9016129  2.7483871  4.39354839 1.43387097]
- [6.85       3.07368421 5.74210526 2.07105263]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ 2 2 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 0 2 0 0 0 0 2 0 0 0 0
+ 0 0 2 2 0 0 0 0 2 0 2 0 2 0 0 2 2 0 0 0 0 0 2 0 0 0 0 2 0 0 0 2 0 0 0 2 0
+ 0 2]
+[[6.85       3.07368421 5.74210526 2.07105263]
+ [5.006      3.428      1.462      0.246     ]
+ [5.9016129  2.7483871  4.39354839 1.43387097]]
 </pre></div>
 </div>
 </div>
@@ -595,7 +574,7 @@ latter are NOT linearly separable from each other.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f3856910fd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8a8769f4d0&gt;
 </pre></div>
 </div>
 <img alt="../_images/Tugas-5_12_1.png" src="../_images/Tugas-5_12_1.png" />
@@ -613,12 +592,13 @@ latter are NOT linearly separable from each other.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f38563a2290&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f8a875bcad0&gt;
 </pre></div>
 </div>
 <img alt="../_images/Tugas-5_14_1.png" src="../_images/Tugas-5_14_1.png" />
 </div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
