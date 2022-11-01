@@ -149,6 +149,11 @@ const thebe_selector_output = ".output, .cell_output"
    UTS Penambangan Data ( 11 Oktober 2022 )
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-7.html">
+   Studi Kasus Peminjaman Uang dengan Naive Bayes(Tugas 7)
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -387,7 +392,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_url</span> <span class="o">=</span> <span class="s2">&quot;https://gist.githubusercontent.com/khikisb/95c3c8c22551d5a29b4e92febecd7646/raw/e39b75ee5d40e08ad0e922ad3d9dfb064e559289/gistfile1.txt&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataset_url</span> <span class="o">=</span> <span class="s2">&quot;https://gist.githubusercontent.com/Faridghozali/063083d1f82b19aa88ab8b61d30cd004/raw/1a0766eedb21e60a1fa29dcba426472efaded632/DataIris&quot;</span>
 <span class="n">iris</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">dataset_url</span><span class="p">)</span>
 <span class="n">iris</span>
 </pre></div>
@@ -395,7 +400,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-6e85940f-f4db-4c5d-96e8-d8dd06a37590">
+  <div id="df-cdb753cc-3bf4-4627-8dde-580732deeb49">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -527,7 +532,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 6 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-6e85940f-f4db-4c5d-96e8-d8dd06a37590')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-cdb753cc-3bf4-4627-8dde-580732deeb49')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -578,12 +583,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-6e85940f-f4db-4c5d-96e8-d8dd06a37590 button.colab-df-convert');
+          document.querySelector('#df-cdb753cc-3bf4-4627-8dde-580732deeb49 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-6e85940f-f4db-4c5d-96e8-d8dd06a37590');
+          const element = document.querySelector('#df-cdb753cc-3bf4-4627-8dde-580732deeb49');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -621,23 +626,71 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_test</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">NameError</span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">0</span><span class="n">c1cdefd54ea</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">X_test</span>
-
-<span class="ne">NameError</span>: name &#39;X_test&#39; is not defined
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Train and Test split</span>
+<span class="n">X_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Y_pred</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_test</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5.8, 2.8, 5.1, 2.4],
+       [6. , 2.2, 4. , 1. ],
+       [5.5, 4.2, 1.4, 0.2],
+       [7.3, 2.9, 6.3, 1.8],
+       [5. , 3.4, 1.5, 0.2],
+       [6.3, 3.3, 6. , 2.5],
+       [5. , 3.5, 1.3, 0.3],
+       [6.7, 3.1, 4.7, 1.5],
+       [6.8, 2.8, 4.8, 1.4],
+       [6.1, 2.8, 4. , 1.3],
+       [6.1, 2.6, 5.6, 1.4],
+       [6.4, 3.2, 4.5, 1.5],
+       [6.1, 2.8, 4.7, 1.2],
+       [6.5, 2.8, 4.6, 1.5],
+       [6.1, 2.9, 4.7, 1.4],
+       [4.9, 3.1, 1.5, 0.1],
+       [6. , 2.9, 4.5, 1.5],
+       [5.5, 2.6, 4.4, 1.2],
+       [4.8, 3. , 1.4, 0.3],
+       [5.4, 3.9, 1.3, 0.4],
+       [5.6, 2.8, 4.9, 2. ],
+       [5.6, 3. , 4.5, 1.5],
+       [4.8, 3.4, 1.9, 0.2],
+       [4.4, 2.9, 1.4, 0.2],
+       [6.2, 2.8, 4.8, 1.8],
+       [4.6, 3.6, 1. , 0.2],
+       [5.1, 3.8, 1.9, 0.4],
+       [6.2, 2.9, 4.3, 1.3],
+       [5. , 2.3, 3.3, 1. ],
+       [5. , 3.4, 1.6, 0.4],
+       [6.4, 3.1, 5.5, 1.8],
+       [5.4, 3. , 4.5, 1.5],
+       [5.2, 3.5, 1.5, 0.2],
+       [6.1, 3. , 4.9, 1.8],
+       [6.4, 2.8, 5.6, 2.2],
+       [5.2, 2.7, 3.9, 1.4],
+       [5.7, 3.8, 1.7, 0.3],
+       [6. , 2.7, 5.1, 1.6],
+       [5.9, 3. , 4.2, 1.5],
+       [5.8, 2.6, 4. , 1.2],
+       [6.8, 3. , 5.5, 2.1],
+       [4.7, 3.2, 1.3, 0.2],
+       [6.9, 3.1, 5.1, 2.3],
+       [5. , 3.5, 1.6, 0.6],
+       [5.4, 3.7, 1.5, 0.2]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_test</span>
 </pre></div>
 </div>
 </div>
@@ -655,15 +708,7 @@ title="Print to PDF"
        &#39;Iris-virginica&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-setosa&#39;,
        &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;, &#39;Iris-versicolor&#39;,
        &#39;Iris-virginica&#39;, &#39;Iris-setosa&#39;, &#39;Iris-virginica&#39;, &#39;Iris-setosa&#39;,
-       &#39;Iris-setosa&#39;], dtype=&#39;&lt;U15&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Train and Test split</span>
-<span class="n">X_train</span><span class="p">,</span><span class="n">X_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+       &#39;Iris-setosa&#39;], dtype=object)
 </pre></div>
 </div>
 </div>
