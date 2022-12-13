@@ -154,6 +154,21 @@ const thebe_selector_output = ".output, .cell_output"
    Studi Kasus Peminjaman Uang dengan Naive Bayes(Tugas 7)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-8.html">
+   Implementasi Naive Bayes Studi Kasus Peminjaman Uang  (Tugas 8)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-9.html">
+   Best Accuracy Between Normalization vs Unnomarlization  (Tugas 9)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tugas-10.html">
+   Ensemble Stacking (Tugas 10)
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -441,7 +456,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-efe0eb94-83fd-4741-be48-c3dd9850d714">
+  <div id="df-80c9195a-88ee-4566-9b0f-c6021cbc3fc7">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -561,7 +576,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-efe0eb94-83fd-4741-be48-c3dd9850d714')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-80c9195a-88ee-4566-9b0f-c6021cbc3fc7')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -612,12 +627,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-efe0eb94-83fd-4741-be48-c3dd9850d714 button.colab-df-convert');
+          document.querySelector('#df-80c9195a-88ee-4566-9b0f-c6021cbc3fc7 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-efe0eb94-83fd-4741-be48-c3dd9850d714');
+          const element = document.querySelector('#df-80c9195a-88ee-4566-9b0f-c6021cbc3fc7');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -739,25 +754,25 @@ dtype: object
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting category_encoders
   Downloading category_encoders-2.5.1.post0-py2.py3-none-any.whl (72 kB)
 ?25l
-     |████▌                           | 10 kB 27.4 MB/s eta 0:00:01
-     |█████████                       | 20 kB 12.6 MB/s eta 0:00:01
-     |█████████████▋                  | 30 kB 16.8 MB/s eta 0:00:01
-     |██████████████████              | 40 kB 7.9 MB/s eta 0:00:01
-     |██████████████████████▋         | 51 kB 7.8 MB/s eta 0:00:01
-     |███████████████████████████▏    | 61 kB 9.1 MB/s eta 0:00:01
-     |███████████████████████████████▊| 71 kB 8.6 MB/s eta 0:00:01
-     |████████████████████████████████| 72 kB 794 kB/s 
-?25hRequirement already satisfied: scikit-learn&gt;=0.20.0 in /usr/local/lib/python3.7/dist-packages (from category_encoders) (1.0.2)
-Requirement already satisfied: numpy&gt;=1.14.0 in /usr/local/lib/python3.7/dist-packages (from category_encoders) (1.21.6)
-Requirement already satisfied: statsmodels&gt;=0.9.0 in /usr/local/lib/python3.7/dist-packages (from category_encoders) (0.12.2)
-Requirement already satisfied: pandas&gt;=1.0.5 in /usr/local/lib/python3.7/dist-packages (from category_encoders) (1.3.5)
-Requirement already satisfied: patsy&gt;=0.5.1 in /usr/local/lib/python3.7/dist-packages (from category_encoders) (0.5.3)
-Requirement already satisfied: scipy&gt;=1.0.0 in /usr/local/lib/python3.7/dist-packages (from category_encoders) (1.7.3)
-Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.5-&gt;category_encoders) (2022.5)
-Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&gt;=1.0.5-&gt;category_encoders) (2.8.2)
-Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (from patsy&gt;=0.5.1-&gt;category_encoders) (1.15.0)
-Requirement already satisfied: joblib&gt;=0.11 in /usr/local/lib/python3.7/dist-packages (from scikit-learn&gt;=0.20.0-&gt;category_encoders) (1.2.0)
-Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.7/dist-packages (from scikit-learn&gt;=0.20.0-&gt;category_encoders) (3.1.0)
+     |████▌                           | 10 kB 17.1 MB/s eta 0:00:01
+     |█████████                       | 20 kB 6.5 MB/s eta 0:00:01
+     |█████████████▋                  | 30 kB 9.1 MB/s eta 0:00:01
+     |██████████████████              | 40 kB 4.3 MB/s eta 0:00:01
+     |██████████████████████▋         | 51 kB 4.4 MB/s eta 0:00:01
+     |███████████████████████████▏    | 61 kB 5.2 MB/s eta 0:00:01
+     |███████████████████████████████▊| 71 kB 5.7 MB/s eta 0:00:01
+     |████████████████████████████████| 72 kB 774 kB/s 
+?25hRequirement already satisfied: scikit-learn&gt;=0.20.0 in /usr/local/lib/python3.8/dist-packages (from category_encoders) (1.0.2)
+Requirement already satisfied: numpy&gt;=1.14.0 in /usr/local/lib/python3.8/dist-packages (from category_encoders) (1.21.6)
+Requirement already satisfied: scipy&gt;=1.0.0 in /usr/local/lib/python3.8/dist-packages (from category_encoders) (1.7.3)
+Requirement already satisfied: statsmodels&gt;=0.9.0 in /usr/local/lib/python3.8/dist-packages (from category_encoders) (0.12.2)
+Requirement already satisfied: pandas&gt;=1.0.5 in /usr/local/lib/python3.8/dist-packages (from category_encoders) (1.3.5)
+Requirement already satisfied: patsy&gt;=0.5.1 in /usr/local/lib/python3.8/dist-packages (from category_encoders) (0.5.3)
+Requirement already satisfied: pytz&gt;=2017.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=1.0.5-&gt;category_encoders) (2022.6)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.8/dist-packages (from pandas&gt;=1.0.5-&gt;category_encoders) (2.8.2)
+Requirement already satisfied: six in /usr/local/lib/python3.8/dist-packages (from patsy&gt;=0.5.1-&gt;category_encoders) (1.15.0)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /usr/local/lib/python3.8/dist-packages (from scikit-learn&gt;=0.20.0-&gt;category_encoders) (3.1.0)
+Requirement already satisfied: joblib&gt;=0.11 in /usr/local/lib/python3.8/dist-packages (from scikit-learn&gt;=0.20.0-&gt;category_encoders) (1.2.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: category-encoders
@@ -788,7 +803,7 @@ Successfully installed category-encoders-2.5.1.post0
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b3f94221-32c4-4fcb-9257-bd7c30bfc1e9">
+  <div id="df-ed6ac0d8-eeef-4beb-9f55-51e697b6f228">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -853,7 +868,7 @@ Successfully installed category-encoders-2.5.1.post0
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b3f94221-32c4-4fcb-9257-bd7c30bfc1e9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ed6ac0d8-eeef-4beb-9f55-51e697b6f228')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -904,12 +919,12 @@ Successfully installed category-encoders-2.5.1.post0
 
       <script>
         const buttonEl =
-          document.querySelector('#df-b3f94221-32c4-4fcb-9257-bd7c30bfc1e9 button.colab-df-convert');
+          document.querySelector('#df-ed6ac0d8-eeef-4beb-9f55-51e697b6f228 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b3f94221-32c4-4fcb-9257-bd7c30bfc1e9');
+          const element = document.querySelector('#df-ed6ac0d8-eeef-4beb-9f55-51e697b6f228');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -938,7 +953,7 @@ Successfully installed category-encoders-2.5.1.post0
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7f9ea3cf-7af8-415c-8247-83192be366cc">
+  <div id="df-123fcd51-f0a9-41f1-abea-2ce4f9886ace">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1003,7 +1018,7 @@ Successfully installed category-encoders-2.5.1.post0
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7f9ea3cf-7af8-415c-8247-83192be366cc')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-123fcd51-f0a9-41f1-abea-2ce4f9886ace')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1054,12 +1069,12 @@ Successfully installed category-encoders-2.5.1.post0
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7f9ea3cf-7af8-415c-8247-83192be366cc button.colab-df-convert');
+          document.querySelector('#df-123fcd51-f0a9-41f1-abea-2ce4f9886ace button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7f9ea3cf-7af8-415c-8247-83192be366cc');
+          const element = document.querySelector('#df-123fcd51-f0a9-41f1-abea-2ce4f9886ace');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
